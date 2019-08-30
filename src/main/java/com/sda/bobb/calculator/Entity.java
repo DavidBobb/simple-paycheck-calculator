@@ -26,9 +26,8 @@ public abstract class Entity {
 
     @Override
     public String toString() {
-        return "\n" + "City: " + city +
-                "\n" + "Amount received: " + amountReceived();
+        return "\n" + "City " + "|" + city + "|" + "\n" + " Amount received " + "|" + amountReceived() + "|" + "\n";
     }
 
-    public abstract float amountReceived();
+    public abstract double amountReceived();  // metoda abstarcata nu are implementare, se poate gasi doar intr-o calasa abstarcta
 }

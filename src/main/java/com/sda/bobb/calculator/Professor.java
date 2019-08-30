@@ -2,7 +2,7 @@ package com.sda.bobb.calculator;
 
 public class Professor extends Entity {
 
-    private float salary;
+    private double salary;
 
     public Professor() {
     }
@@ -13,12 +13,12 @@ public class Professor extends Entity {
         if (salary != 0) {
             this.salary = salary;
         } else {
-            throw new InvalidDataException("Salary can't be 0");
+            throw new InvalidDataException("Salary must be grater than 0");
         }
     }
 
     @Override
-    public float amountReceived() {
+    public double amountReceived() {
         return salary;
     }
 }

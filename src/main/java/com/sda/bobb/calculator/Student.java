@@ -2,7 +2,7 @@ package com.sda.bobb.calculator;
 
 public class Student extends Entity {
 
-    private float scholarship;
+    private double scholarship;
 
     public Student() {
     }
@@ -13,12 +13,12 @@ public class Student extends Entity {
         if (scholarship != 0) {
             this.scholarship = scholarship;
         } else {
-            throw new InvalidDataException("Scholarship can't be 0");
+            throw new InvalidDataException("Scholarship must be grater than 0");
         }
     }
 
     @Override
-    public float amountReceived() {
+    public double amountReceived() {
         return scholarship;
     }
 }
